@@ -60,6 +60,16 @@ body{background:var(--cream)}.top{height:88px;position:relative;z-index:15}.bran
  .featureCopy .btn{margin-top:15px}
 }
 @media(max-width:380px){.heroImage{height:225px}.featureImage{height:220px}}
+
+/* V13: show the entire product photograph in the product information popup */
+.dialog{overflow-y:auto;overscroll-behavior:contain}
+.dialog>img#modalImg{display:block;width:100%;height:100%;min-height:0;max-height: min(82vh,760px);object-fit:contain;object-position:center;background:#eee9e1;padding:18px}
+@media(max-width:650px){
+ .modal{padding:12px;align-items:center}
+ .dialog{display:flex;flex-direction:column;width:100%;max-height:calc(100dvh - 36px);overflow-y:auto}
+ .dialog>img#modalImg{width:100%;height:auto;min-height:0;max-height:42dvh;aspect-ratio:4/5;object-fit:contain;padding:12px;flex-shrink:0}
+ .dialogCopy{padding:22px 22px 28px}
+}
 </style><meta content="AN RAN CARE | Explore feminine wellness essentials, thoughtful daily care, and partnership opportunities." name="description"/><link href="assets/anran-logo.png" rel="icon"/><style>
 /* V10: accessibility, spacing, mobile-first refinements */
 html{scroll-padding-top:88px}body{overflow-x:hidden}
